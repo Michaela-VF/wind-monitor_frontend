@@ -1,8 +1,8 @@
 # 🌬️ Wind Monitor Frontend
 
 This app is the frontend counterpart for the `Wind Monitor` application, built with React, JS and Vite .
-
 This application provides the user interface (UI) and communicates with the Wind Monitor Rails API to retrieve and display wind monitoring data.
+Built with explicit comments so it can be understood by a junior and/or unfamiliar with React developer.
 
 ---
 
