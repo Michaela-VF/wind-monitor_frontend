@@ -10,7 +10,7 @@ export async function getDashboardMetrics(){
 
     //  If Rails returns an error status (e.g 500) we throw
     // so the component can catch it and show a friendly msg
-    if (!response.ook) {
+    if (!response.ok) {
         throw new Error(`API error: ${response.status}`);
     }
 
