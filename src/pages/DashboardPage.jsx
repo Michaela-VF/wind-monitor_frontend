@@ -1,6 +1,7 @@
 // src/pages/DashboardPage.jsx
 import { useState, useEffect } from 'react'
 import { getDashboardMetrics } from '../services/api'
+import StatCard from '../components/StatCard'
 
 function DashboardPage() {
   // React Hook; special functions to "hook into" React's internal system
@@ -40,22 +41,10 @@ function DashboardPage() {
     <div>
       <h1>Dashboard</h1>
       <div className="stats-grid">
-        <div className="stat-card">
-          <h2>Total Turbines</h2>
-          <p>{metrics.turbine_count}</p>
-        </div>
-        <div className="stat-card">
-          <h2>Total Readings</h2>
-          <p>{metrics.reading_count}</p>
-        </div>
-        <div className="stat-card">
-          <h2>Active Alerts</h2>
-          <p>{metrics.active_alerts}</p>
-        </div>
-        <div className="stat-card">
-          <h2>Resolved Alerts</h2>
-          <p>{metrics.resolved_alerts}</p>
-        </div>
+        <StatCard title="Total Turbines" value={metrics.turbine_count} />
+        <StatCard title="Total Readings" value={metrics.reading_count} />
+        <StatCard title="Active Alerts" value ={metrics.active_alerts} />
+        <StatCard title="Resolved Alerts" value={metrics.resolved_alerts} />
       </div>
     </div>
   )
